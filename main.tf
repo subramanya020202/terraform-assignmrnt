@@ -109,5 +109,5 @@ resource "aws_instance" "private_vm" {
 # Define the SSH Key Pair
 resource "aws_key_pair" "ec2_key" {
   key_name   = "terraform-key"  # Choose a key name
-  public_key = file("~/.ssh/id_rsa.pub")  # Path to your existing SSH public key
+  public_key = file("~/.ssh/id_rsa.pub")  
 }
