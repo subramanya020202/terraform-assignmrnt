@@ -23,6 +23,11 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.6.0 
+          
+      - name: Generate SSH Key Pair
+        run: |
+          ssh-keygen -t rsa -b 2048 -f id_rsa -q -N ""
+          echo "Public Key Generated"
 
     
       - name: Terraform Init
